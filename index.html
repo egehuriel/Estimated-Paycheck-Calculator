@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estimated Paycheck Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Estimated Paycheck Calculator</h1>
+    <form id="paycheckForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="birthDate">Birth Date:</label>
+        <select id="birthDate" name="birthDate" required>
+            <option value="">Select</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+        </select><br><br>
+
+        <label for="birthPlace">Place of Birth:</label>
+        <select id="birthPlace" name="birthPlace" required>
+            <option value="">Select</option>
+            <option value="istanbul">Istanbul</option>
+            <option value="izmir">Izmir</option>
+            <option value="ankara">Ankara</option>
+            <option value="kocaeli">Kocaeli</option>
+            <option value="canakkale">Canakkale</option>
+            <option value="sinop">Sinop</option>
+        </select><br><br>
+
+        <label for="languages">Known Languages:</label><br>
+        <div>
+            <input type="checkbox" id="english" name="languages" value="English">
+            <label for="english">English</label><br>
+            <input type="checkbox" id="german" name="languages" value="German">
+            <label for="german">German</label><br>
+            <input type="checkbox" id="french" name="languages" value="French">
+            <label for="french">French</label><br>
+        </div><br>
+
+        <label for="drivingLicense">Do you have a driving license?</label><br>
+        <div>
+            <input type="radio" id="yes" name="drivingLicense" value="Yes" required>
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="drivingLicense" value="No" required>
+            <label for="no">No</label><br>
+        </div><br>
+
+        <label for="university">University Graduated:</label>
+        <select id="university" name="university" required>
+            <option value="">Select</option>
+            <option value="Istanbul Bilgi University">Istanbul Bilgi University</option>
+            <option value="Yeditepe University">Yeditepe University</option>
+            <option value="Middle East Technical University">Middle East Technical University</option>
+            <option value="Bosphorus University">Bosphorus University</option>
+            <option value="Istanbul Technical University">Istanbul Technical University</option>
+            <option value="Bilkent University">Bilkent University</option>
+        </select><br><br>
+
+        <button type="button" onclick="calculatePaycheck()">Calculate Estimated Salary</button><br><br>
+
+        <div id="error"></div>
+
+        <div id="paycheckResult">
+            <label for="paycheck">Estimated Salary: </label>
+            <span id="greeting"></span><span id="fullName"></span><br>
+            <span id="birth"></span><br>
+            <span id="languageInfo"></span><br>
+            <span id="licenseInfo"></span><br>
+            <span id="uniInfo"></span><br>
+            <span id="salaryInfo"></span>
+        </div>
+    </form>
+
+    <script src="paycheck_calculator.js"></script>
+</body>
+</html>
