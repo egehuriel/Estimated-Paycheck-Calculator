@@ -14,7 +14,7 @@ This project is a simple paycheck calculator built using HTML, CSS, and JavaScri
 ## Installation
 
 1. Clone the repository:
-   git clone https://github.com/egehuriel/paycheck-calculator.git
+   git clone https://github.com/egehuriel/estimated-paycheck-calculator.git
 2. Navigate to the project directory:
    cd paycheck-calculator
 3. Open index.html in your preferred web browser.
