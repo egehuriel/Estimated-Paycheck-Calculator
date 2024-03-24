@@ -4,7 +4,7 @@ function calculatePaycheck() {
     var birthDate = document.getElementById("birthDate").value;
     var birthPlace = document.getElementById("birthPlace").value;
     var languages = document.querySelectorAll('input[name="languages"]:checked');
-    var driverLicense = document.querySelector('input[name="driverLicense"]:checked');
+    var driverLicense = document.querySelector('input[name="drivingLicense"]:checked');
     var university = document.getElementById("university").value;
 
     if (firstName === "" || lastName === "" || birthDate === "" || birthPlace === "" || languages.length === 0 || driverLicense === null || university === "") {
@@ -20,17 +20,20 @@ function calculatePaycheck() {
         document.getElementById("greeting").textContent = "Hello, ";
         document.getElementById("fullName").textContent = firstName + " " + lastName + ". ";
         document.getElementById("birthInfo").textContent = "Your birth date is: " + birthDate + ". ";
-        document.getElementById("languageInfo").textContent = "Languages you know: ";
+        
+        var languageText = "Languages you know: ";
         for (var i = 0; i < languages.length; i++) {
-            document.getElementById("languageInfo").textContent += languages[i].value;
+            languageText += languages[i].value;
             if (i !== languages.length - 1) {
-                document.getElementById("languageInfo").textContent += ", ";
+                languageText += ", ";
             }
         }
-        document.getElementById("languageInfo").textContent += ". ";
+        languageText += ". ";
+        document.getElementById("languageInfo").textContent = languageText;
+        
         document.getElementById("licenseInfo").textContent = "Do you have a driver's license? " + driverLicense.value + ". ";
         document.getElementById("universityInfo").textContent = "University you graduated from: " + university + ". ";
-        document.getElementById("salaryInfo").textContent = "Your salary: " + totalSalary + " TL.";
+        document.getElementById("salaryInfo").textContent = "Your salary: " + totalSalary + " $.";
 
         document.getElementById("paycheckResult").style.display = "block";
         document.getElementById("error").style.display = "none";

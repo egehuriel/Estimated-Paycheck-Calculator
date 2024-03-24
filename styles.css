@@ -65,4 +65,10 @@ button:hover {
 
 form div {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; 
+}
+
+input[type="checkbox"] {
+    margin-bottom: 5px; 
 }
