@@ -63,12 +63,13 @@ button:hover {
     color: #555;
 }
 
-form div {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column; 
+form div label {
+    display: inline-block;
+    margin-right: 10px;
+    text-align: right;
 }
 
-input[type="checkbox"] {
-    margin-bottom: 5px; 
+form div input[type="radio"],
+form div input[type="checkbox"] {
+    margin-right: 5px;
 }
