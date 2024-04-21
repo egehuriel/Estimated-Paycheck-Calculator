@@ -19,7 +19,7 @@ function calculatePaycheck() {
         
         document.getElementById("greeting").textContent = "Hello, ";
         document.getElementById("fullName").textContent = firstName + " " + lastName + ". ";
-        document.getElementById("birthInfo").textContent = "Your birth date is: " + birthDate + ". ";
+        document.getElementById("birthInfo").textContent = "Your birth year is: " + birthDate + ". ";
         
         var languageText = "Languages you know: ";
         for (var i = 0; i < languages.length; i++) {
