@@ -19,7 +19,7 @@ function calculatePaycheck() {
         
         document.getElementById("greeting").textContent = "Hello, ";
         document.getElementById("fullName").textContent = firstName + " " + lastName + ". ";
-        document.getElementById("birthInfo").textContent = "Your birth year is: " + birthDate + ". ";
+        document.getElementById("birthInfo").textContent = `Date of birth: ${birthDate}. `;
         
         var languageText = "Languages you know: ";
         for (var i = 0; i < languages.length; i++) {
@@ -31,9 +31,9 @@ function calculatePaycheck() {
         languageText += ". ";
         document.getElementById("languageInfo").textContent = languageText;
         
-        document.getElementById("licenseInfo").textContent = "Do you have a driver's license? " + driverLicense.value + ". ";
-        document.getElementById("universityInfo").textContent = "University you graduated from: " + university + ". ";
-        document.getElementById("salaryInfo").textContent = "Your salary: " + totalSalary + " $.";
+        document.getElementById("licenseInfo").textContent = `Do you have a driver's license? ${driverLicense.value}. `;
+        document.getElementById("universityInfo").textContent = `University you graduated from: ${university}. `;
+        document.getElementById("salaryInfo").textContent = `Your salary: ${totalSalary.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`;
 
         document.getElementById("paycheckResult").style.display = "block";
         document.getElementById("error").style.display = "none";

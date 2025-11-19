@@ -1,0 +1,16 @@
+{
+  "name": "estimated-paycheck-calculator",
+  "version": "1.0.0",
+  "description": "This project is a simple paycheck calculator built using HTML, CSS, and JavaScript. It calculates an estimated monthly salary based on user inputs such as personal details, language skills, and driving license status.",
+  "main": "paycheck_calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
